@@ -1,0 +1,38 @@
+OLED_ENABLE = yes
+ENCODER_ENABLE = yes
+ENCODER_MAP_ENABLE = yes
+RGB_MATRIX_ENABLE = yes
+MOUSEKEY_ENABLE = yes
+VIALRGB_ENABLE = yes
+SPLIT_KEYBOARD = yes
+CAPS_WORD_ENABLE = yes
+REPEAT_KEY_ENABLE = yes
+LTO_ENABLE = yes  # optim for compiling, should be tested
+
+OS_DETECTION_ENABLE = yes
+UNICODE_COMMON = yes
+COMBO_ENABLE = no # may need for home row mods
+
+# Disable to try to fix issue at boot
+MAGIC_ENABLE = no
+BOOTMAGIC_ENABLE = no
+EXTRAKEY_ENABLE = no
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
+NKRO_ENABLE = no
+AUDIO_ENABLE = no
+KEY_OVERRIDE_ENABLE = no
+RGBLIGHT_ENABLE = no
+LEADER_ENABLE = no
+MIDI_ENABLE = no
+UNICODE_ENABLE = no
+BLUETOOTH_ENABLE = no
+CUSTOM_MATRIX = no
+# DEBOUNCE_TYPE = no  # this creates an error when compiling
+USB_WAIT_FOR_ENUMERATION = no  # may want to try yes
+NO_USB_STARTUP_CHECK = no # may want to try yes
+DEFERRED_EXEC_ENABLE = no
+DYNAMIC_TAPPING_TERM_ENABLE = no
+
+SLEEP_LED_ENABLE = no
+BACKLIGHT_ENABLE = no
