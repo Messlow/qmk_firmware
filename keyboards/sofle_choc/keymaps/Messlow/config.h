@@ -47,8 +47,10 @@
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 
 // Home row mods
-#define TAPPING_TERM 185
-#define PERMISSIVE_HOLD
+#define TAPPING_TERM 250            // milliseconds before hold activates
+#define PERMISSIVE_HOLD             // tap other keys while holding mod = hold activates
+#define QUICK_TAP_TERM 0              // lets you use mod-tap as modifier right after tapping
+#define IGNORE_MOD_TAP_INTERRUPT      // prevents rolling (zx) from triggering mods
 // #define COMBO_TERM 40
 #define CHORDAL_HOLD
 
