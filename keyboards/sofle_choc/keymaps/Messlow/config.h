@@ -45,7 +45,7 @@
 
 #define ONESHOT_TAP_TOGGLE 4  // Tapping this number of times holds the key until tapped once again.
 #define ONESHOT_TIMEOUT 3000  // Time (in ms) before the one shot key is released
-#define SPLIT_MODS_ENABLE
+// #define SPLIT_MODS_ENABLE
 
 // Home row mods
 #define TAPPING_TERM 250 // milliseconds before hold activates
