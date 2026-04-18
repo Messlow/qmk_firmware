@@ -40,11 +40,12 @@
 // Double tap locks layer
 #define TAPPING_TOGGLE 2
 
-// Helpful defines
-#define GRAVE_MODS (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT) | MOD_BIT(KC_LGUI) | MOD_BIT(KC_RGUI) | MOD_BIT(KC_LALT) | MOD_BIT(KC_RALT))
-
 // Double tap shift for caps lock
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+
+#define ONESHOT_TAP_TOGGLE 4  // Tapping this number of times holds the key until tapped once again.
+#define ONESHOT_TIMEOUT 3000  // Time (in ms) before the one shot key is released
+#define SPLIT_MODS_ENABLE
 
 // Home row mods
 #define TAPPING_TERM 250 // milliseconds before hold activates

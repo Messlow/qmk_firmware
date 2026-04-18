@@ -3,17 +3,15 @@ ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 RGB_MATRIX_ENABLE = yes
 MOUSEKEY_ENABLE = yes
-VIALRGB_ENABLE = yes
 SPLIT_KEYBOARD = yes
 CAPS_WORD_ENABLE = yes
-REPEAT_KEY_ENABLE = yes
 LTO_ENABLE = yes  # optim for compiling, should be tested
 
 OS_DETECTION_ENABLE = yes
-UNICODE_COMMON = yes
-COMBO_ENABLE = no # may need for home row mods
 
 # Disable to try to fix issue at boot
+UNICODE_COMMON = no
+COMBO_ENABLE = no # may need for home row mods
 MAGIC_ENABLE = no
 BOOTMAGIC_ENABLE = no
 EXTRAKEY_ENABLE = no
@@ -33,6 +31,5 @@ USB_WAIT_FOR_ENUMERATION = no  # may want to try yes
 NO_USB_STARTUP_CHECK = no # may want to try yes
 DEFERRED_EXEC_ENABLE = no
 DYNAMIC_TAPPING_TERM_ENABLE = no
-
 SLEEP_LED_ENABLE = no
 BACKLIGHT_ENABLE = no

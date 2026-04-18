@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_AGIN, KC_PSTE, KC_COPY, KC_CUT, KC_UNDO, KC_NO,
 
         // Left home row
-        KC_NO, KC_LEFT_GUI, KC_LEFT_ALT, KC_LEFT_SHIFT, KC_LEFT_CTRL, KC_NO,
+        OS_TOGG, KC_LEFT_GUI, KC_LEFT_ALT, KC_LEFT_SHIFT, KC_LEFT_CTRL, KC_NO,
         // Right home row
         KC_CAPS_LOCK, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_NO,
 
