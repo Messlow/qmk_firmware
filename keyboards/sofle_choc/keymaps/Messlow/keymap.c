@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         // Left home row
         // OSM(MOD_LSFT), LGUI_T(KC_A), LALT_T(KC_R), LSFT_T(KC_S), LCTL_T(KC_T), KC_G, // home row mods
-        OSM(MOD_LSFT), KC_A, KC_R, KC_S, KC_T, KC_G,
+        KC_U, KC_A, KC_R, KC_S, KC_T, KC_G, // using KC_U instead of OSM(MOD_LSFT) to debug the not working key
         // Right home row
         // KC_M, RCTL_T(KC_N), RSFT_T(KC_E), RALT_T(KC_I), RGUI_T(KC_O), FR_SCLN,  // home row mods
         KC_M, KC_N, KC_E, KC_I, KC_O, FR_SCLN,
