@@ -50,8 +50,8 @@
 #define TAPPING_TERM 250 // milliseconds before hold activates
 #define PERMISSIVE_HOLD  // tap other keys while holding mod = hold activates
 #define FLOW_TAP_TERM 150
-#define CHORDAL_HOLD    // opposite hands rule
-#define SPECULATIVE_HOLD
+// #define CHORDAL_HOLD    // opposite hands rule
+// #define SPECULATIVE_HOLD
 
 // Hints: ("false positives" = triggering modifiers accidentally, "false negatives" = failing to trigger modifiers when they are desired)
 // Noticeable delay when tapping HRMs: Increase FLOW_TAP_TERM.
