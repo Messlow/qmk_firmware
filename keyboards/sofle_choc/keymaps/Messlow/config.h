@@ -47,10 +47,15 @@
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 
 // Home row mods
-#define TAPPING_TERM 250         // milliseconds before hold activates
-#define PERMISSIVE_HOLD          // tap other keys while holding mod = hold activates
-#define QUICK_TAP_TERM 0         // lets you use mod-tap as modifier right after tapping
-// #define COMBO_TERM 40
-#define CHORDAL_HOLD
+#define TAPPING_TERM 250 // milliseconds before hold activates
+#define PERMISSIVE_HOLD  // tap other keys while holding mod = hold activates
+#define FLOW_TAP_TERM 150
+#define CHORDAL_HOLD    // opposite hands rule
+#define SPECULATIVE_HOLD
 
-#define NAV_ESC LT(NAVIGATION_LAYER, KC_ESC)
+// Hints: ("false positives" = triggering modifiers accidentally, "false negatives" = failing to trigger modifiers when they are desired)
+// Noticeable delay when tapping HRMs: Increase FLOW_TAP_TERM.
+// False negatives (same-hand): Reduce TAPPING_TERM (or disable Chordal Hold)
+// False negatives (cross-hand): Reduce FLOW_TAP_TERM
+// False positives (same-hand): Increase TAPPING_TERM
+// False positives (cross-hand): Increase FLOW_TAP_TERM
