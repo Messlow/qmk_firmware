@@ -23,8 +23,7 @@ enum layer_names {
     SYMBOL_LAYER,
 };
 
-// TODO: consider removing home row mods in favor of tap toggles with OSM keys in dedicated layer?
-// TODO: rework thumb clusters (probably shortcuts or OSM keys or toggles for additional shortcut layers)
+// Dedicated thumb modifiers and layer holds; one-shot Shift on the left edge.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE_COLEMAK_LAYER] = LAYOUT(
         // Left number rows
@@ -38,53 +37,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_J, KC_L, KC_U, KC_Y, FR_DCIR, FR_CEDL,
 
         // Left home row
-        // OSM(MOD_LSFT), LGUI_T(KC_A), LALT_T(KC_R), LSFT_T(KC_S), LCTL_T(KC_T), KC_G, // home row mods
-        OSM(MOD_LSFT), KC_A, KC_R, KC_S, KC_T, KC_G,
+        KC_TAB, KC_A, KC_R, KC_S, KC_T, KC_G,
         // Right home row
-        // KC_M, RCTL_T(KC_N), RSFT_T(KC_E), RALT_T(KC_I), RGUI_T(KC_O), FR_SCLN,  // home row mods
         KC_M, KC_N, KC_E, KC_I, KC_O, FR_SCLN,
 
         // Left bottom row + encoder
-        OSM(MOD_LCTL), KC_Z, KC_X, KC_C, KC_D, KC_V, KC_MPLY,
+        OSM(MOD_LSFT), KC_Z, KC_X, KC_C, KC_D, KC_V, KC_MPLY,
         // Right bottom row + encoder
         MS_BTN3, KC_K, KC_H, KC_COMM, KC_DOT, FR_EACU, FR_DGRV,
 
         // Left thumb cluster
-        KC_LALT, KC_LCTL, KC_LSFT, KC_SPC, LT(NAVIGATION_LAYER, KC_TAB),
+        KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, MO(NAVIGATION_LAYER),
         // Right thumb cluster
-        LT(SYMBOL_LAYER, KC_ENT), KC_BSPC, KC_RGUI, KC_DEL, KC_ALGR),
+        MO(SYMBOL_LAYER), KC_ENT, KC_BSPC, KC_RGUI, KC_ALGR),
 
     [NAVIGATION_LAYER] = LAYOUT(
         // Left number rows
-        KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,
+        KC_NO, LCTL(KC_1), LCTL(KC_2), LCTL(KC_3), LCTL(KC_4), LCTL(KC_5),
         // Right number rows
-        KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
+        LCTL(KC_6), LCTL(KC_7), LCTL(KC_8), LCTL(KC_9), LCTL(KC_0), KC_NO,
 
         // Left top row
-        KC_NO, OSM(MOD_HYPR), OSM(MOD_LCTL | MOD_LALT), OSM(MOD_LCTL | MOD_LSFT), OSM(MOD_LCTL | MOD_LGUI), KC_NO,
+        KC_NO, KC_LGUI, KC_LALT, KC_LSFT, KC_LCTL, KC_NO,
         // Right top row
-        KC_AGIN, KC_PSTE, KC_COPY, KC_CUT, KC_UNDO, KC_NO,
+        KC_AGIN, KC_PSTE, KC_COPY, KC_CUT, KC_UNDO, KC_DEL,
 
         // Left home row
-        OS_TOGG, KC_LEFT_GUI, KC_LEFT_ALT, KC_LEFT_SHIFT, KC_LEFT_CTRL, KC_NO,
+        KC_TAB, OSM(MOD_LGUI | MOD_LSFT), OSM(MOD_LCTL | MOD_LSFT), OSM(MOD_LCTL | MOD_LGUI), OSM(MOD_LCTL | MOD_LSFT), KC_NO,
         // Right home row
         KC_CAPS_LOCK, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_NO,
 
         // Left bottom row + encoder
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, _______,
+        OSM(MOD_LSFT), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_MPLY,
         // Right bottom row + encoder
-        _______, KC_INS, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO,
+        MS_BTN3, KC_INS, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO,
 
         // Left thumb cluster
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, MO(NAVIGATION_LAYER),
         // Right thumb cluster
-        _______, _______, _______, _______, _______),
+        MO(SYMBOL_LAYER), KC_ENT, KC_BSPC, KC_RGUI, KC_ALGR),
 
     [SYMBOL_LAYER] = LAYOUT(
         // Left number rows
-        _______, _______, _______, _______, _______, _______,
+        KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,
         // Right number rows
-        _______, _______, _______, _______, _______, _______,
+        KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
 
         // Left top row
         KC_NO, FR_TILD, FR_BSLS, FR_SLSH, FR_PIPE, FR_DLR,
@@ -92,19 +89,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 
         // Left home row
-        KC_NO, FR_LABK, FR_LBRC, FR_LBRC, FR_LPRN, FR_PERC,
+        KC_TAB, FR_LABK, FR_LBRC, FR_LCBR, FR_LPRN, FR_PERC,
         // Right home row
-        KC_NO, FR_RPRN, FR_RBRC, FR_RBRC, FR_RABK, KC_NO,
+        KC_NO, FR_RPRN, FR_RBRC, FR_RCBR, FR_RABK, KC_NO,
 
         // Left bottom row + encoder
-        KC_NO, FR_ASTR, FR_MINS, FR_PLUS, FR_EQL, FR_AMPR, _______,
+        OSM(MOD_LSFT), FR_ASTR, FR_MINS, FR_PLUS, FR_EQL, FR_AMPR, KC_MPLY,
         // Right bottom row + encoder
-        _______, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        MS_BTN3, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 
         // Left thumb cluster
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, MO(NAVIGATION_LAYER),
         // Right thumb cluster
-        _______, _______, _______, _______, _______),
+        MO(SYMBOL_LAYER), KC_ENT, KC_BSPC, KC_RGUI, KC_ALGR),
 };
 
 #ifdef ENCODER_MAP_ENABLE

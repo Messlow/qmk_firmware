@@ -37,26 +37,10 @@
 
 #define BACKLIGHT_BREATHING
 
-// Double tap locks layer
-#define TAPPING_TOGGLE 2
-
-// Double tap shift for caps lock
+// Double tap Shift for Caps Word.
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 
-#define ONESHOT_TAP_TOGGLE 4  // Tapping this number of times holds the key until tapped once again.
+// One-shot modifiers apply to the next key; repeated taps do not lock them.
 #define ONESHOT_TIMEOUT 3000  // Time (in ms) before the one shot key is released
-// #define SPLIT_MODS_ENABLE
-
-// Home row mods
-#define TAPPING_TERM 250 // milliseconds before hold activates
-#define PERMISSIVE_HOLD  // tap other keys while holding mod = hold activates
-#define FLOW_TAP_TERM 150
-// #define CHORDAL_HOLD    // opposite hands rule
-// #define SPECULATIVE_HOLD
-
-// Hints: ("false positives" = triggering modifiers accidentally, "false negatives" = failing to trigger modifiers when they are desired)
-// Noticeable delay when tapping HRMs: Increase FLOW_TAP_TERM.
-// False negatives (same-hand): Reduce TAPPING_TERM (or disable Chordal Hold)
-// False negatives (cross-hand): Reduce FLOW_TAP_TERM
-// False positives (same-hand): Increase TAPPING_TERM
-// False positives (cross-hand): Increase FLOW_TAP_TERM
+// Retain the existing tapping interval for one-shot keys.
+#define TAPPING_TERM 250
