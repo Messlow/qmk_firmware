@@ -88,6 +88,10 @@ positions without reproducing the physical column stagger.
 
 ## Encoder knobs
 
+`ENCODER_DIRECTION_FLIP` corrects the physical direction of both knobs.
+Flash both halves after changing this setting, since each half reads its own
+encoder pins.
+
 | Layer held | Left knob: counterclockwise / clockwise | Right knob: counterclockwise / clockwise |
 | --- | --- | --- |
 | None | Ctrl+Shift+Left / Right | Ctrl+Cmd+Left / Right |
@@ -110,6 +114,19 @@ Media keys require `EXTRAKEY_ENABLE = yes`.
 Base-layer shortcuts send the listed modifiers with each arrow key; their
 effects depend on the host and application. Scrolling direction can also be
 affected by host settings.
+If the terminal does not consume a base-layer shortcut, it can pass the arrow
+to the running program as an escape sequence. The rotation mappings contain
+neither Escape nor Ctrl+C; terminal bindings determine whether a shortcut
+switches tabs or reaches the program.
+
+For macOS workspace switching with the right knob, optional
+[`kitty-macos.conf`](kitty-macos.conf) mappings discard Ctrl+Cmd+Left/Right
+events that reach Kitty, so those events are not forwarded to a running TUI.
+Copy these mappings into the Mac's Kitty configuration and reload it, then
+verify workspace switching still works and the TUI keeps running. These
+mappings do not configure the macOS workspace shortcut. If a shortcut manager
+rewrites the chord, inspect the received keys with `kitten show-key` and match
+the discarded chord to those events.
 RGB brightness respects the configured maximum of 100.
 
 Circumflex on the base layer and cedilla/grave on Symbols are dead keys.

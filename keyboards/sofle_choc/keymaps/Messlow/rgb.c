@@ -35,11 +35,13 @@ rgb_t thumb_color;
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     switch (get_highest_layer(layer_state | default_layer_state)) {
         default:
-            char_color   = hsv_to_rgb_limited(HSV_YELLOW);
-            home_color   = hsv_to_rgb_limited(HSV_YELLOW);
+            // Shared purple hue: soft lavender letters and a muted, deeper
+            // violet for modifiers/thumbs, with equal brightness limits.
+            char_color   = hsv_to_rgb_limited(191, 110, 255);
+            home_color   = char_color;
             number_color = hsv_to_rgb_limited(HSV_CORAL);
-            mod_color    = hsv_to_rgb_limited(HSV_TEAL);
-            thumb_color  = hsv_to_rgb_limited(HSV_TEAL);
+            mod_color    = hsv_to_rgb_limited(191, 155, 255);
+            thumb_color  = mod_color;
 
             set_color(char_leds, sizeof(char_leds) / sizeof(char_leds[0]), char_color);
             set_color(home_leds, sizeof(home_leds) / sizeof(home_leds[0]), home_color);

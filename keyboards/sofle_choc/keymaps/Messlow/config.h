@@ -16,6 +16,9 @@
 #pragma once
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+
+// Match the physical rotation of both knobs to the encoder map directions.
+#define ENCODER_DIRECTION_FLIP
 // Enabling this option changes the startup behavior to listen for an
 // active USB communication to delegate which part is master and which
 // is slave. With this option enabled and theres’s USB communication,
