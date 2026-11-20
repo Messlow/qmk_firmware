@@ -11,11 +11,18 @@ Thumb keys, in physical left-to-right order:
 
 | Right inner | | | | Right outer |
 | --- | --- | --- | --- | --- |
-| Hold Symbols | Enter | Backspace | Cmd | AltGr |
+| Hold Symbols | Backspace | Enter | Cmd | AltGr |
+
+Backspace occupies the position mirroring left Space, with Enter one key farther
+outward. This is a comfort experiment; the physical resting thumb position
+depends on hand size and keyboard placement, not the diagram alone.
+Backspace is also available at the far-right top letter-row key on Base and
+Symbols, so the right pinky and thumb positions can be compared. Nav uses Delete
+at that pinky position. Left-thumb Alt remains available.
 
 Thumb keys remain available on both layers. On the base layer, the left outer
-column is Esc / Ctrl / one-shot Shift; the right outer column is Alt / Cmd /
-right Shift. Right Alt remains AltGr on the thumb; the pinky Alt sends left Alt.
+column is Esc / Ctrl / one-shot Shift; the right outer column is Backspace / Cmd /
+right Shift. Right Alt remains AltGr on the thumb.
 The far-left home-row key is Tab on Nav and Symbols.
 The far-left bottom-row key is one-shot Shift on every layer. Tap Shift, release
 it, then type the key to shift. It expires after three seconds if unused. It can
@@ -41,14 +48,14 @@ positions without reproducing the physical column stagger.
 ┌───────┬───────┬───────┬───────┬───────┬───────┐    ┌───────┬───────┬───────┬───────┬───────┬───────┐
 │   #   │   1   │   2   │   3   │   4   │   5   │    │   6   │   7   │   8   │   9   │   0   │   -   │
 ├───────┼───────┼───────┼───────┼───────┼───────┤    ├───────┼───────┼───────┼───────┼───────┼───────┤
-│  Esc  │   Q   │   W   │   F   │   P   │   B   │    │   J   │   L   │   U   │   Y   │^ dead │  Alt  │
+│  Esc  │   Q   │   W   │   F   │   P   │   B   │    │   J   │   L   │   U   │   Y   │   '   │ Bksp  │
 ├───────┼───────┼───────┼───────┼───────┼───────┤    ├───────┼───────┼───────┼───────┼───────┼───────┤
 │ Ctrl  │   A   │   R   │   S   │   T   │   G   │    │   M   │   N   │   E   │   I   │   O   │  Cmd  │
 ├───────┼───────┼───────┼───────┼───────┼───────┤    ├───────┼───────┼───────┼───────┼───────┼───────┤
 │Shift* │   Z   │   X   │   C   │   D   │   V   │    │   K   │   H   │   ,   │   .   │   é   │ Shift │
 └───────┴───────┴───────┴───────┴───────┴───────┘    └───────┴───────┴───────┴───────┴───────┴───────┘
         ┌───────┬───────┬───────┬───────┬───────┐    ┌───────┬───────┬───────┬───────┬───────┐
-        │ Ctrl  │  Alt  │  Cmd  │ Space │  NAV  │    │  SYM  │ Enter │ Bksp  │  Cmd  │ AltGr │
+        │ Ctrl  │  Alt  │  Cmd  │ Space │  NAV  │    │  SYM  │ Bksp  │ Enter │  Cmd  │ AltGr │
         └───────┴───────┴───────┴───────┴───────┘    └───────┴───────┴───────┴───────┴───────┘
 ```
 
@@ -65,7 +72,7 @@ positions without reproducing the physical column stagger.
 │Shift* │  --   │  --   │  --   │  --   │  --   │    │Insert │ Home  │PgDown │ PgUp  │  End  │ Shift │
 └───────┴───────┴───────┴───────┴───────┴───────┘    └───────┴───────┴───────┴───────┴───────┴───────┘
         ┌───────┬───────┬───────┬───────┬───────┐    ┌───────┬───────┬───────┬───────┬───────┐
-        │ Ctrl  │  Alt  │  Cmd  │ Space │  NAV  │    │  SYM  │ Enter │ Bksp  │  Cmd  │ AltGr │
+        │ Ctrl  │  Alt  │  Cmd  │ Space │  NAV  │    │  SYM  │ Bksp  │ Enter │  Cmd  │ AltGr │
         └───────┴───────┴───────┴───────┴───────┘    └───────┴───────┴───────┴───────┴───────┘
 ```
 
@@ -75,14 +82,14 @@ positions without reproducing the physical column stagger.
 ┌───────┬───────┬───────┬───────┬───────┬───────┐    ┌───────┬───────┬───────┬───────┬───────┬───────┐
 │  F12  │  F1   │  F2   │  F3   │  F4   │  F5   │    │  F6   │  F7   │  F8   │  F9   │  F10  │  F11  │
 ├───────┼───────┼───────┼───────┼───────┼───────┤    ├───────┼───────┼───────┼───────┼───────┼───────┤
-│  --   │   ~   │   \   │   /   │   |   │   $   │    │` dead │   :   │   ;   │cedilla│  --   │  Alt  │
+│  --   │   ~   │   \   │   /   │   |   │   $   │    │` dead │   :   │   ;   │  --   │^ dead │ Bksp  │
 ├───────┼───────┼───────┼───────┼───────┼───────┤    ├───────┼───────┼───────┼───────┼───────┼───────┤
-│  Tab  │   <   │   [   │   {   │   (   │   %   │    │  --   │   )   │   ]   │   }   │   >   │  Cmd  │
+│  Tab  │   <   │   [   │   {   │   (   │   %   │    │cedilla│   )   │   }   │   ]   │   >   │  Cmd  │
 ├───────┼───────┼───────┼───────┼───────┼───────┤    ├───────┼───────┼───────┼───────┼───────┼───────┤
-│Shift* │   *   │   -   │   +   │   =   │   &   │    │  --   │  --   │  --   │  --   │  --   │ Shift │
+│Shift* │   *   │   -   │   +   │   =   │   &   │    │  --   │   à   │   è   │   ç   │  --   │ Shift │
 └───────┴───────┴───────┴───────┴───────┴───────┘    └───────┴───────┴───────┴───────┴───────┴───────┘
         ┌───────┬───────┬───────┬───────┬───────┐    ┌───────┬───────┬───────┬───────┬───────┐
-        │ Ctrl  │  Alt  │  Cmd  │ Space │  NAV  │    │  SYM  │ Enter │ Bksp  │  Cmd  │ AltGr │
+        │ Ctrl  │  Alt  │  Cmd  │ Space │  NAV  │    │  SYM  │ Bksp  │ Enter │  Cmd  │ AltGr │
         └───────┴───────┴───────┴───────┴───────┘    └───────┴───────┴───────┴───────┴───────┘
 ```
 
@@ -91,6 +98,13 @@ positions without reproducing the physical column stagger.
 `ENCODER_DIRECTION_FLIP` corrects the physical direction of both knobs.
 Flash both halves after changing this setting, since each half reads its own
 encoder pins.
+
+Base-layer rotation uses custom keycodes that hold each shortcut for 20 ms
+and add a 20 ms gap after release. Nav scrolling and Symbols volume/RGB
+controls retain QMK's default encoder timing, with no added delay. The base
+timing adjustment tests host shortcut recognition when physical key chords
+work but knob turns interrupt a terminal TUI. The shortcut combinations are
+unchanged; the effect on macOS workspace switching needs testing on the host.
 
 | Layer held | Left knob: counterclockwise / clockwise | Right knob: counterclockwise / clockwise |
 | --- | --- | --- |
@@ -119,7 +133,8 @@ to the running program as an escape sequence. The rotation mappings contain
 neither Escape nor Ctrl+C; terminal bindings determine whether a shortcut
 switches tabs or reaches the program.
 
-For macOS workspace switching with the right knob, optional
+Test the encoder timing adjustment first, without Kitty discard mappings.
+If shortcut events still leak into the terminal, optional
 [`kitty-macos.conf`](kitty-macos.conf) mappings discard Ctrl+Cmd+Left/Right
 events that reach Kitty, so those events are not forwarded to a running TUI.
 Copy these mappings into the Mac's Kitty configuration and reload it, then
@@ -129,7 +144,7 @@ rewrites the chord, inspect the received keys with `kitten show-key` and match
 the discarded chord to those events.
 RGB brightness respects the configured maximum of 100.
 
-Circumflex on the base layer and cedilla/grave on Symbols are dead keys.
+Circumflex, cedilla, and grave on Symbols are dead keys.
 
 ## Navigation
 
@@ -144,7 +159,7 @@ these keys, then release it to return to typing.
 | Kitty previous/next tab | Tap T or R (one-shot Ctrl+Shift), then N/O |
 | macOS previous/next Space | Tap S (one-shot Ctrl+Cmd), then N/O |
 | Neovim numbered tab | On Nav, tap 1–0 to send Ctrl+1–0; or use thumb Ctrl + number on base |
-| Delete | Nav + far-right top-row key (base Alt) |
+| Delete | Nav + far-right top-row key (base Backspace) |
 | Tab | Nav + far-left home-row key (base Ctrl); also available on Symbols |
 
 The A/R/S/T combined modifiers can also be held while tapping arrows repeatedly.
@@ -161,7 +176,7 @@ hold Nav, tap R or T for one-shot Ctrl+Shift, release Nav, then type the letter
 within three seconds. The one-shot combinations work with base-layer letters,
 not only navigation keys.
 
-Right Cmd and Shift remain available on both layers. Right pinky Alt becomes
+Right Cmd and Shift remain available on both layers. Right pinky Backspace becomes
 Delete on Nav. Left pinky Ctrl becomes Tab on both layers; use thumb Ctrl for
 Ctrl+Tab, or hold Nav and P (Ctrl), then tap the Tab position.
 
@@ -169,17 +184,32 @@ Ctrl+Tab, or hold Nav and P (Ctrl), then tap the Tab position.
 
 Hold Symbols to access punctuation, including paired brackets, braces and
 parentheses on the home row. These keycodes expect a Canadian French host layout.
+Pairs mirror across hands: pinkies `< >`, ring fingers `[ ]`, middle fingers
+`{ }`, and index fingers `( )`.
 The number row sends F1–F10 at positions 1–0, F11 at the minus position, and F12
 at the hash position.
 
 Frequently used punctuation sits together on the right top letter row:
 Symbols + L = colon (no separate Shift press needed).
-Symbols + J = dead grave, Symbols + U = semicolon, Symbols + Y = dead cedilla.
-Colon, semicolon, and cedilla use the index, middle, and ring fingers;
+Symbols + J = dead grave, Symbols + U = semicolon.
+Colon and semicolon use the index and middle fingers;
 dead grave uses the inner index column.
 Hold Symbols with the right thumb, tap the dead key, then release Symbols
-before typing the accented letter. Tab stays at its old left pinky home-row
-position on either layer; Symbols + Tab uses opposite hands.
+before typing the accented letter. Dead cedilla is on the innermost right home-row
+key (base M), directly below dead grave, operated with the right index finger.
+Tab remains at the far-left home-row position on Nav and Symbols.
+
+Base apostrophe is a single key immediately left of pinky Backspace. It sends
+the Canadian French Shift+comma keycode without requiring physical Shift.
+Symbols at that same position provides dead circumflex.
+
+Symbols + H / comma / period produces à / è / ç. These macros send the dead
+accent followed by the letter, so Symbols can remain held. Hold Shift as well
+for À / È / Ç, or tap one-shot left Shift after holding Symbols, then tap the
+accented-letter key. Shift applies only to the letter and one-shot Shift is
+consumed by that character. Existing base é uses Shift for É as before.
+These sequences require a Canadian French host layout; verify accent composition
+and capitals on the host after flashing.
 
 ## Build
 
